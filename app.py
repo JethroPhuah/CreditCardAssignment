@@ -44,7 +44,7 @@ def index():
 #         elif model_selection == 'Neural Network':
 #             model = load_model("neuralNetwork")
         
-        pred = model.predict([[float(Age), float(Loan), float(Income)]])
+        pred = model.predict([[float(Income), float(Age), float(Loan)]])
         if pred == [0]:
             pred = 'No'
         if pred == [1]:
