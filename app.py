@@ -52,7 +52,7 @@ def index():
         s = "The predicted default is : " + pred
         return(render_template("index.html", result = s))
     else:
-        return(render_template("index.html", result = "Connection passout"))        
+        return(render_template("index.html", result = "Let's Get it!"))        
 
 
 # In[ ]:
