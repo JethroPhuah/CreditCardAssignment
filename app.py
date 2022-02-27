@@ -17,7 +17,7 @@ app = Flask(__name__)
 
 
 from flask import request, render_template
-from keras.models import load_model
+# from keras.models import load_model
 import joblib
 
 @app.route("/", methods = ["GET", "POST"])
@@ -41,8 +41,8 @@ def index():
         elif model_selection == 'XGBoost':
             model = joblib.load("XGBoost")
             
-        elif model_selection == 'Neural Network':
-            model = load_model("neuralNetwork")
+        # elif model_selection == 'Neural Network':
+        #     model = load_model("neuralNetwork")
         
         pred = model.predict([[float(Income), float(Age), float(Loan)]])
         if pred == [0]:
